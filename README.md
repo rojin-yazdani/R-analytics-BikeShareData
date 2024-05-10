@@ -51,6 +51,13 @@ library(stringr)
 ```
 
 ```r
+# Loads the bikeshare data from .csv files for three cities
+ny = read.csv('data/new_york_city.csv')
+wash = read.csv('data/washington.csv')
+chi = read.csv('data/chicago.csv')
+```
+
+```r
 # Shows the first row of New York city data
 head(ny,1)
 ```
@@ -68,12 +75,6 @@ head(chi,1)
 ```
 ![](images/chi-row.png)
 
-```r
-# Loads the bikeshare data from .csv files for three cities
-ny = read.csv('new_york_city.csv')
-wash = read.csv('washington.csv')
-chi = read.csv('chicago.csv')
-```
 
 ## 1) What are the most common month, day of week, and hour for traveling in each city?
 
