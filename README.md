@@ -34,7 +34,6 @@ The data is available at /data folder.
 2) What are the most frequently used start and end stations in each city?
 3) How is the relation between user's age and their trip duration?
 <br>
-<br>
 
 # Analysis
 
@@ -129,7 +128,7 @@ table(subset(all_data, all_data$city == 'Chicago')$Start.Day)
 
 ```
 
-```r
+```
 1    2    3    4    5    6    7 
 1111 1302 1292 1236 1254 1285 1150 
 ```
@@ -176,7 +175,7 @@ for (curr_city in unique(all_data$city)) {
 }
 ```
 
-```r
+```
 The most frequently used stations in  Chicago --> 
 The most popular start station:  Streeter Dr & Grand Ave
 The most popular end station:  Streeter Dr & Grand Ave
@@ -197,7 +196,7 @@ What are the usual ranges of trips in each city?
 summary(all_data$Trip.Duration)
 ```
 
-```r
+```
 Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
 60     392     667    1098    1159 1088634       1 
 ```
@@ -207,7 +206,7 @@ Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
 by(subset(all_data, !is.na(Trip.Duration))$Trip.Duration, subset(all_data, !is.na(Trip.Duration))$city, median)
 ```
 
-```r
+```
 subset(all_data, !is.na(Trip.Duration))$city: Chicago
 [1] 670
 ------------------------------------------------------------ 
@@ -249,7 +248,7 @@ First, let`s look at the codes used to answer this question.
 summary(all_data$Birth.Year)
 ```
 
-```r
+```
 Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
 1885    1970    1981    1979    1988    2002   96015 
 ```
@@ -259,7 +258,7 @@ Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
 summary(all_data$Trip.Duration)
 ```
 
-```r
+```
 Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
 60     392     667    1098    1159 1088634       1 
 ```
